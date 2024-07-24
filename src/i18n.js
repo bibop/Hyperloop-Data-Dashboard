@@ -1,0 +1,141 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  en: {
+    translation: {
+      "Overview": "Overview",
+      "Detailed Comparison": "Detailed Comparison",
+      "Interactive Info": "Interactive Info",
+      "Hyperloop Interactive Dashboard": "Hyperloop Interactive Dashboard",
+      "Hyperloop Data Analysis": "Hyperloop Data Analysis",
+      "Comparison of Transportation Modes": "Comparison of Transportation Modes",
+      "Speed": "Speed",
+      "Comfort": "Comfort",
+      "Eco-friendliness": "Eco-friendliness",
+      "Cost": "Cost",
+      "Innovation": "Innovation",
+      "Safety": "Safety",
+      "Capacity": "Capacity",
+      "Maintenance Cost": "Maintenance Cost",
+      "Premium Services": "Premium Services",
+      "Key Advantages of Hyperloop": "Key Advantages of Hyperloop",
+      "Sort Descending": "Sort Descending",
+      "Sort Ascending": "Sort Ascending",
+      "Mode": "Mode",
+      "Hyperloop": "Hyperloop",
+      "HSR": "High-Speed Rail",
+      "Aereo": "Airplane",
+      "Auto": "Car",
+      "Bus": "Bus",
+      "This": "This",
+      "maintenanceCost": "Maintenance Cost",
+      "chart shows how Hyperloop compares to other transportation modes": "chart shows how Hyperloop compares to other transportation modes",
+      "in terms of": "in terms of",
+      "Hyperloop excels in almost all categories, offering an unprecedented travel experience.": "Hyperloop excels in almost all categories, offering an unprecedented travel experience.",
+      "Speed Advantage": "Hyperloop offers unmatched speed, significantly reducing travel times compared to other transportation modes.",
+      "Minimal environmental impact thanks to the use of renewable energy": "Minimal environmental impact thanks to the use of renewable energy",
+      "Comfortable and productive travel experience with personalized services": "Comfortable and productive travel experience with personalized services",
+      "Potential to revitalize the local economy and create new jobs": "Potential to revitalize the local economy and create new jobs",
+      "Seamless integration with other transportation modes for optimized mobility": "Seamless integration with other transportation modes for optimized mobility",
+      "Bar": "Bar",
+      "Line": "Line",
+      "Pie": "Pie",
+      "Radar": "Radar"
+    }
+  },
+  it: {
+    translation: {
+      "Overview": "Panoramica",
+      "Detailed Comparison": "Confronto Dettagliato",
+      "Interactive Info": "Info Interattive",
+      "Hyperloop Interactive Dashboard": "Dashboard Interattiva Hyperloop",
+      "Hyperloop Data Analysis": "Analisi Dati Hyperloop",
+      "Comparison of Transportation Modes": "Confronto dei Mezzi di Trasporto",
+      "Speed": "Velocità",
+      "Comfort": "Comfort",
+      "Eco-friendliness": "Ecosostenibilità",
+      "Cost": "Costo",
+      "Innovation": "Innovazione",
+      "Safety": "Sicurezza",
+      "Capacity": "Capacità",
+      "Maintenance Cost": "Costo di Manutenzione",
+      "Premium Services": "Servizi Premium",
+      "Key Advantages of Hyperloop": "Vantaggi Chiave di Hyperloop",
+      "Sort Descending": "Ordina Decrescente",
+      "Sort Ascending": "Ordina Crescente",
+      "Mode": "Modalità",
+      "Hyperloop": "Hyperloop",
+      "HSR": "Treno Alta Velocità",
+      "Aereo": "Aereo",
+      "Auto": "Auto",
+      "Bus": "Bus",
+      "This": "Questo",
+      "maintenanceCost": "Costo di Manutenzione",
+      "chart shows how Hyperloop compares to other transportation modes": "grafico mostra come Hyperloop si confronta con altri mezzi di trasporto",
+      "in terms of": "in termini di",
+      "Hyperloop excels in almost all categories, offering an unprecedented travel experience.": "Hyperloop eccelle in quasi tutte le categorie, offrendo un'esperienza di viaggio senza precedenti.",
+      "Speed Advantage": "Hyperloop offre una velocità senza pari, riducendo significativamente i tempi di viaggio rispetto ad altri mezzi di trasporto.",
+      "Minimal environmental impact thanks to the use of renewable energy": "Minimo impatto ambientale grazie all'uso di energie rinnovabili",
+      "Comfortable and productive travel experience with personalized services": "Esperienza di viaggio confortevole e produttiva con servizi personalizzati",
+      "Potential to revitalize the local economy and create new jobs": "Potenziale per rivitalizzare l'economia locale e creare nuovi posti di lavoro",
+      "Seamless integration with other transportation modes for optimized mobility": "Integrazione seamless con altre modalità di trasporto per una mobilità ottimizzata",
+      "Bar": "Barre",
+      "Line": "Linea",
+      "Pie": "Torta",
+      "Radar": "Radar"
+    }
+  },
+  nl: {
+    translation: {
+      "Overview": "Overzicht",
+      "Detailed Comparison": "Gedetailleerde Vergelijking",
+      "Interactive Info": "Interactieve Info",
+      "Hyperloop Interactive Dashboard": "Interactief Dashboard Hyperloop",
+      "Hyperloop Data Analysis": "Hyperloop Gegevensanalyse",
+      "Comparison of Transportation Modes": "Vergelijking van Vervoersmiddelen",
+      "Speed": "Snelheid",
+      "Comfort": "Comfort",
+      "Eco-friendliness": "Milieuvriendelijkheid",
+      "Cost": "Kosten",
+      "Innovation": "Innovatie",
+      "Safety": "Veiligheid",
+      "Capacity": "Capaciteit",
+      "Maintenance Cost": "Onderhoudskosten",
+      "Premium Services": "Premium Diensten",
+      "Key Advantages of Hyperloop": "Belangrijkste Voordelen van Hyperloop",
+      "Sort Descending": "Sorteer Aflopend",
+      "Sort Ascending": "Sorteer Oplopend",
+      "Mode": "Modus",
+      "Hyperloop": "Hyperloop",
+      "HSR": "Hogesnelheidstrein",
+      "Aereo": "Vliegtuig",
+      "Auto": "Auto",
+      "Bus": "Bus",
+      "This": "Dit",
+      "maintenanceCost": "Onderhoudskosten",
+      "chart shows how Hyperloop compares to other transportation modes": "diagram toont hoe Hyperloop zich verhoudt tot andere vervoersmiddelen",
+      "in terms of": "in termen van",
+      "Hyperloop excels in almost all categories, offering an unprecedented travel experience.": "Hyperloop blinkt uit in bijna alle categorieën en biedt een ongekende reiservaring.",
+      "Speed Advantage": "Hyperloop biedt ongeëvenaarde snelheid en verkort de reistijden aanzienlijk in vergelijking met andere vervoersmiddelen.",
+      "Minimal environmental impact thanks to the use of renewable energy": "Minimale impact op het milieu dankzij het gebruik van hernieuwbare energie",
+      "Comfortable and productive travel experience with personalized services": "Comfortabele en productieve reiservaring met gepersonaliseerde diensten",
+      "Potential to revitalize the local economy and create new jobs": "Potentieel om de lokale economie nieuw leven in te blazen en nieuwe banen te creëren",
+      "Seamless integration with other transportation modes for optimized mobility": "Naadloze integratie met andere vervoersmiddelen voor geoptimaliseerde mobiliteit",
+      "Bar": "Staaf",
+      "Line": "Lijn",
+      "Pie": "Taart",
+      "Radar": "Radar"
+    }
+  }
+};
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: 'en', // default language
+  interpolation: {
+    escapeValue: false
+  }
+});
+
+export default i18n;
